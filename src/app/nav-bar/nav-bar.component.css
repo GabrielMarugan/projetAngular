@@ -1,0 +1,26 @@
+*{
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+    background-color: #000;
+    min-height: 6vh;
+
+}
+h1{
+    text-align: left;
+}
+nav{
+    display: flex;
+    background-color: #000;
+}
+a{
+    margin: 10px;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    font-size: .8rem;
+}

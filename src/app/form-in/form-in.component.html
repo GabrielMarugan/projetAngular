@@ -1,0 +1,5 @@
+<form [formGroup]="userForm" (ngSubmit)="validForm()">
+    <input type="text" placeholder="E-mail" formControlName="email">
+    <input type="text" placeholder="Mot de passe" formControlName="password">
+    <input type="submit" value="Connexion">
+</form>
