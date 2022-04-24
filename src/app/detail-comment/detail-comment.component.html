@@ -1,0 +1,24 @@
+
+<div *ngIf="isEdited; else notEdited">
+    <form [formGroup]="commentf" (ngSubmit)="editComment()">
+        <input type="text"  formControlName="contenu">
+        <input type="submit" value="Valider Modification">
+    </form>
+</div>
+<ng-template #notEdited>
+    
+    <div>
+        {{commentd.contenu}}
+    </div> 
+ </ng-template>
+ <!---->
+ <span> crée le : {{commentd.creation}}</span>
+<span *ngIf="isAuthor(commentd.id)">
+      
+    <button *ngIf="!isEdited;" (click)="clickEdit()">Modifier</button>
+
+    <button (click)="deleteComment()">Supprimer</button>
+
+</span>
+    
+

@@ -1,6 +1,7 @@
 <form [formGroup]="userForm" (ngSubmit)="validForm()">
     <input type="text" placeholder="E-mail" formControlName="email">
+    <input type="text" placeholder="Pseudo" formControlName="pseudo">
     <input type="text" placeholder="Mot de passe" formControlName="password">
-    <input type="text" placeholder="Vérification mot de passe" formControlName="vpassword">
+    <input type="text" placeholder="Confirmez le mot de passe" formControlName="vpassword">
     <input type="submit" value="Inscription">
 </form>

@@ -1,0 +1,7 @@
+<h2>Nouvel Article</h2>
+
+<form [formGroup]="articleForm" (ngSubmit)="validForm()">
+    <input type="text" placeholder="Titre" formControlName="titre">
+    <input type="text" placeholder="Commencez son article..." formControlName="contenu">
+    <input type="submit" value="Publier">
+</form>

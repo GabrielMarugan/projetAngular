@@ -1,0 +1,19 @@
+<section>
+    
+
+    
+        <div *ngFor="let comment of TabComments"> 
+            <p>{{comment.contenu}}</p>
+            <span> crée le : {{comment.creation}}  par {{comment.id}}</span>
+            <div>
+                <span>===================</span>
+            </div>  
+
+        
+        </div>
+
+        <button (click)="newComment()" >Nouveau Com</button>
+
+    
+   
+</section>

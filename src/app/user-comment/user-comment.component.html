@@ -1,0 +1,15 @@
+<h3>Mes commentaires</h3>
+
+<section>
+    
+        <div *ngFor="let comment of TabComment">
+            <p>
+                {{comment.contenu}}  
+            </p>
+            <span> écrit le {{comment.creation}} pour <a routerLink="/article/{{comment.id_article}}"> cet article  </a> </span>  
+        </div>
+
+
+    
+   
+</section>

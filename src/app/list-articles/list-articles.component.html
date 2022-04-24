@@ -1,0 +1,21 @@
+<section>
+    
+    <button (click)="newArticle()" >Nouveau Article</button>
+    
+        <div *ngFor="let art of TabArticles"> 
+            <h3><a routerLink="/article/{{art.id_article}}"> {{art.titre}}</a></h3>
+            <p>{{art.contenu}}</p>
+            <span> crée le : {{art.creation}} par {{art.id}}</span>
+            <div>
+                <span>===================</span>
+            </div>  
+
+
+        
+        </div>
+
+   
+
+    
+   
+</section>

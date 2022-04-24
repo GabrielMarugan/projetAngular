@@ -1,0 +1,36 @@
+
+<div *ngIf="isEdited; else noEdited">
+    <form [formGroup]="userf" (ngSubmit)="editUser()">
+        <label>E-mail:</label><input type="text"  formControlName="email"><br/>
+        <label>Pseudo:</label><input type="text"  formControlName="pseudo"><br/>
+        <label>Avatar:</label><input type="text"  formControlName="avatar"><br/>
+        <label>Password:</label><input type="password" formControlName="password"><br/>
+        <input type="submit" value="Valider Modification">
+    </form>
+</div>
+<ng-template #noEdited>
+    <div>
+        <div>
+        Pseudo: {{userd.pseudo}} <br/>
+        Email: {{userd.email}} <br/>
+        Niveau: {{userd.niveau}} <br/>
+        </div>
+        <div>
+            <img src="{{userd.avatar}}">
+        </div>
+    </div>
+</ng-template>
+
+
+    <span *ngIf="isAuthor(userd.id)">
+      
+        <button *ngIf="!isEdited;" (click)="clickEdit()">Modifier mon profil</button>
+    
+        <button (click)="deleteUser()">Supprimer mon compte</button>
+    
+    </span>
+
+
+    <app-user-article></app-user-article>
+
+

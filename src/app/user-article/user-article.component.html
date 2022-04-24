@@ -1,0 +1,17 @@
+<h3>Mes articles</h3>
+
+<section>
+    
+        <div *ngFor="let article of TabArticle">
+            <h4><a routerLink="/article/{{article.id_article}}"> {{article.titre}}</a></h4>
+            <p> 
+                {{article.contenu}}  
+            </p>
+            <span>crée le : {{article.creation}}</span>  
+        </div>
+
+        <app-user-comment></app-user-comment>
+
+    
+   
+</section>

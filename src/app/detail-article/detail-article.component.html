@@ -1,0 +1,29 @@
+
+<div *ngIf="isEdited; else notEdited">
+    <form [formGroup]="artf" (ngSubmit)="editArticle()">
+        <input type="text"  formControlName="titre">
+        <input type="text"  formControlName="contenu">
+        <input type="submit" value="Valider Modification">
+    </form>
+</div>
+<ng-template #notEdited>
+    
+    <div>
+        <h3><a routerLink="/article/{{artd.id_article}}"> {{artd.titre}}</a></h3>
+        <p>{{artd.contenu}}</p>
+    </div> 
+</ng-template>
+<span>-------------------</span>
+<span> crée le : {{artd.creation}} par {{artd.id}}</span>
+
+    <span *ngIf="isAuthor(artd.id)">
+      
+        <button *ngIf="!isEdited;" (click)="clickEdit()">Modifier</button>
+    
+        <button (click)="deleteArticle()">Supprimer</button>
+    
+    </span>
+
+   
+    
+    <app-comments-article></app-comments-article>

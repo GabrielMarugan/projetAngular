@@ -1,7 +1,15 @@
 <section>
     <h1> Angular Social</h1>
     <nav>
-        <a routerLink="/signIn">Connexion</a>
-        <a routerLink="/signUp">Inscription</a>
+
+        <div *ngIf="isConnected(); else logbar"> 
+            <a routerLink="/user/liste">Liste User</a>
+            <a routerLink="/article">Liste Article</a>
+            <a routerLink="/commentaire">Liste Commentaire</a>
+        </div>
+        <ng-template  #logbar>
+            <a routerLink="/signIn">Connexion</a>
+            <a routerLink="/signUp">Inscription</a> 
+        </ng-template>
     </nav>
 </section>

@@ -1,0 +1,19 @@
+
+
+<section>
+    <h3> Commentaires </h3>
+    <app-new-comment (newComment)="ajoutCom($event)"></app-new-comment>
+    <ul>
+        <li *ngFor="let comment of TabComment">
+            
+            <div>
+                <app-detail-comment [idCom]="comment.id_commentaire" (indSupChange)="supInd($event)"></app-detail-comment>
+            </div>
+            
+        
+        </li>
+    </ul>
+        
+    
+   
+</section>
